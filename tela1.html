@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Letra - Stopots</title>
+    <link rel="stylesheet" href="stop.css">
+</head>
+<body>
+  
+
+    <div class="container">
+        <h1>Stopots - Sorteio de Letra</h1>
+        <button id="sortearBtn"><strong>Sortear Letra</strong></button>
+        <div id="letraSorteada" class="letra">Letra Sorteada: </div>
+        <button class="mostrarRegrasBtn " id="mostrarRegrasBtn" style="display: none;"><strong>Mostrar Regras</strong></button>
+        <button class="iniciarBtn" id="iniciarBtn" style="display: none;" onclick="entrar()"><strong>Jogar</strong></button>
+    </div>
+
+    <div class="regras-container" style="display: none;">
+        <h2>Regras do Jogo</h2>
+        <div class="regras">
+            <div class="regra-item">
+                <strong><span class="regra-titulo">Nome: </span></strong>
+                <span class="regra-descricao">Informe um nome.</span>
+            </div>
+            <div class="regra-item">
+                <strong><span class="regra-titulo">CEP: </span></strong>
+                <span class="regra-descricao">Informe um CEP válido.</span>
+            </div>
+            <div class="regra-item">
+                <strong><span class="regra-titulo">Minha Sogra é: </span></strong>
+                <span class="regra-descricao">Complete com uma palavra que comece com a letra sorteada.</span>
+            </div>
+            <div class="regra-item">
+                <strong><span class="regra-titulo">Fruta: </span></strong>
+                <span class="regra-descricao">Informe uma fruta que comece com a letra sorteada.</span>
+            </div>
+            <div class="regra-item">
+                <strong><span class="regra-titulo">Carro: </span></strong>
+                <span class="regra-descricao">Informe um carro que comece com a letra sorteada.</span>
+            </div>
+            <button class="redirecionarBtn" id="redirecionarBtn" onclick="regras()"><strong>Voltar</strong></button>
+            <!-- Adicione mais regras conforme necessário -->
+        </div>
+    </div>
+    <script src="stop.js"></script>
+</body>
+</html>

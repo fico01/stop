@@ -7,24 +7,43 @@
     <link rel="icon" type="imagex/png" href="unnamed.png">
     <style>
         body {
-            background-image:url(maxresdefault.jpg) ;
-            font-family: Arial, sans-serif;
+            background-image: url(header_pt.png);
+           font-family: Verdana;
             text-align: center;
             background-size: cover;
         }
         #entrada {
+            color: white;
+            -webkit-text-stroke: 1px black;
+            
+            font-family:Verdana;
+            background-color:#383197e0 ;
+            position:absolute;
+            top: 5%;
+            left: 3%;
             display: block;
-            border: 5px solid black;
+            border: 10px solid #2c2678e0;
             border-radius: 10px;
-            width: 300px;
+            width: 700px;
+            height: 500px;
             margin: auto;
-            background-color: white;
+           
+            
+           
         }
         #confirmacao {
-            border: 5px solid black;
-            width: 300px;
+            font-family: Verdana;
+            -webkit-text-stroke: 1px black;
+            color: white;
+            background-color:#383197e0 ;
+            position:absolute;
+            top: 5%;
+            left: 3%;
+            border: 10px solid #2c2678e0;
+            width: 700px;
+            height: 500px;
             margin: auto;
-            background-color: white;
+            
             display: none;
             border-radius: 10px;
         }
@@ -33,32 +52,57 @@
             width: 300px;
             margin: auto;
             background-color: white;
-            display: none;
+            display: block;
             border-radius: 10px;
         }
+        .bt-yellow {
+            background: none;
+            width: 264px;
+            height: 86px;
+            background-image: url(sprite.png);
+            background-position: 0 0;
+            border: none;
+        }
+        input{
+            font-family: Verdana;
+            border-radius: 10px;
+            border: 5px solid #221d5d;
+            float:left;
+            padding: 11px 21px;
+            position:sticky;
+            left: 8%;
+            top: 34%;
+        }
+        button{
+            font-size: larger;
+            font-family:Verdana ;
+            float: center;
+            padding: 11px 21px;
+        }
+
+       
     </style>
 </head>
 <body>
     <!-- Tela de Entrada -->
     <div id="entrada" style="box-sizing: border-box;">
-        <h1>Bem-vindo ao Stopots</h1>
-        <p>Insira seu nome:</p>
-        <input type="text" id="nomeJogador" placeholder="Seu nome">
+        <img src="logo (1).png" width="295px" height="156px">
+        <p style="font-size: 25px;">Insira seu nome:</p>
+        
+        <input  type="text" id="nomeJogador" >
         <br>
-        <button onclick="confirmarEntrada()">Entrar</button>
+        <button class="bt-yellow" onclick="confirmarEntrada()">Entrar</button>
     </div>
 
     <!-- Tela de Confirmação -->
     <div id="confirmacao">
-        <h1>Olá, <span id="nomeConfirmado"></span>!</h1>
-        <p>Seu nome foi confirmado e gravado na sessão.</p>
-        <h2>Categorias</h2>
-        <input type="text" id="categories" placeholder="Categoria1, Categoria2, Categoria3, ...">
-        <button onclick="startGame()">Iniciar Jogo</button>
+        <h1 style="font-size: 25px;">Olá, <span id="nomeConfirmado"></span>!</h1>
+        <p style="font-size: 25px;">Seu nome foi confirmado e gravado na sessão.</p>
+        <button class="bt-yellow" onclick="startGame()">Iniciar Jogo</button>
         
         
-    </div><br>
-    <center><div id="gameGrid"></div></center>
+    </div>
+    
 
     <script>
         function confirmarEntrada() {
@@ -78,43 +122,13 @@
             }
         }
         function startGame() {
-            const categoriesInput = document.getElementById("categories");
-            const categories = categoriesInput.value.split(",").map(category => category.trim());
-            const gridContainer = document.getElementById("gameGrid");
+           window.location.href = 'tela1.html';
+       
 
-            if (categories.length === 0) {
-                alert("Por favor, insira pelo menos uma categoria.");
-                return;
-            }
-
-            // Cria a grade do jogo
-            const table = document.createElement("table");
-            const headerRow = document.createElement("tr");
-
-            categories.forEach(category => {
-                const th = document.createElement("th");
-                th.textContent = category;
-                headerRow.appendChild(th);
-            });
-
-            table.appendChild(headerRow);
-
-            for (let i = 0; i < 5; i++) {
-                const row = document.createElement("tr");
-
-                categories.forEach(category => {
-                    const td = document.createElement("td");
-                    const input = document.createElement("input");
-                    input.type = "text";
-                    td.appendChild(input);
-                    row.appendChild(td);
-                });
-
-                table.appendChild(row);
-            }
-
-            gridContainer.innerHTML = "";
-            gridContainer.appendChild(table);
+        // Agendar o clique automático no botão após 3 segundos (3000 milissegundos)
+        setTimeout(function() {
+            document.getElementById('redirecionarBtn').click();
+        }, 3000);
         }
     </script>
 </body>

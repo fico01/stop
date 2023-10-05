@@ -1,0 +1,86 @@
+body {
+    background-image: url(background.png);
+           font-family: Verdana;
+            text-align: center;
+            background-size: cover;
+}
+
+.container {
+    
+    color: white;
+    text-align: center;
+    background-color:#5b43c3;
+    border: 10px solid #746ed1;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+h1 {
+    font-size: 24px;
+    -webkit-text-stroke: 1px black;
+}
+
+button {
+    text-align: center;
+    font-family: Verdana;
+    padding: 10px 20px;
+    font-size: 14px;
+    background: none;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 264px;
+    height: 86px;
+    background-image: url(sprite.png);
+    background-position: 0 0;
+            
+}
+
+.letra {
+    font-size: 30px;
+    margin-top: 20px;
+    -webkit-text-stroke: 1px black;
+}
+
+.regras-container {
+    font-size: 25px;
+    text-align: justify;
+    color: white;
+
+    background-color:#5b43c3;
+    border: 10px solid #746ed1;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+}
+ .iniciarBtn {
+    float: right;
+    display: flex;
+    margin-right: 65px;
+    margin-top: 50px;
+}
+.mostrarRegrasBtn {
+    float: left;
+    display: flex;
+    margin-left: 65px;
+    margin-top: 50px;
+}
+.redirecionarBtn{
+ 
+  margin-left: 200px;
+  text-align: center;
+}
+.regra-titulo{
+    color: #ffffff;
+  
+}
